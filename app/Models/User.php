@@ -58,4 +58,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    //Relación de uno a uno
+    public function device(){
+        return $this->hasOne('Apo\Models\Device');
+    }
 }
